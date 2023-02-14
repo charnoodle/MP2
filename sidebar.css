@@ -136,7 +136,9 @@ body {
 	color: #fff;
 }
 
-
+.submit {
+  color: white;
+}
 
 .menu label {
   margin-bottom: 0;
@@ -164,6 +166,13 @@ input#menu[type="checkbox"] {
   margin-bottom: 10px;
 }
 
+.addToCart {
+  width: 40px;
+  float: right;
+  /* position: absolute; */
+    /* bottom: 0;
+    right: 0; */
+}
 
 .sub-menu-dropdown {
 	display: none;
@@ -280,6 +289,32 @@ input#menu[type="checkbox"] {
   top: 73px;
 		transform: translate3d(200px, 0, 0);
     transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#searchButton #searchButton  {
+  width: 80px;
+  color: white;
+}
+
+form.d-flex input[type="search"] {
+  width: 225px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 500px;
+  align-items: center;
+  position: absolute;
+  bottom: 10;
+}
+
+form.d-flex button {
+  display: inline-block;
+  width: 225px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-top: 550px;
+  position: absolute;
+  bottom: 10;
 }
 	
 	/* label.hamburger {
