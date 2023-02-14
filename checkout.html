@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="checkout.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Checkout Page</title>
+</head>
+
+<div class="container">
+    <div class="title">
+        <h2>Checkout Form</h2>
+    </div>
+  <div class="d-flex">
+    <form id="food-order">
+        <div class="form-group">
+          <label for="productSelect">Tickets: </label>
+          <select name="ticket" class="form-control" id="productSelect">
+            <option selected disabled value="burger">Select one</option>
+            <option value="rideAllYouCan">Ride all you can!</option>
+            <option value="fastPass"><strong>Fast Pass</strong></option>
+            <option value="regular">Regular</option>
+            <option value="basic">Basic</option>
+            <option value="groupPackage">Group Package (5 pax)</option>
+            <option value="couplePackage">Couple Package (2 pax)</option>
+          </select>
+          <label>Amount: </label>
+          <input
+            type="number"
+            class="form-control mb-2"
+            id="quantityInput"
+            min="1"
+            max="9"
+            value="1"
+          />
+          <button id="addButton">Add to cart</button>
+        </div>
+       
+      </form>
+    <div class="Yorder">
+        <h3>Your Order</h3>
+      <table id="productTable">
+        <tr>
+          <th colspan="2">Product</th>
+          <th colspan="2">Quantity</th>
+        </tr>
+        <!-- <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Subtotal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td>Free shipping</td>
+        </tr> -->
+      </table><br>
+      <div>
+        <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
+      </div>
+      <p>
+          Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+      </p>
+      <div>
+        <input type="radio" name="dbt" value="cd"> Cash on Delivery
+      </div>
+      <div>
+        <input type="radio" name="dbt" value="cd"> Paypal <span>
+            <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" alt="" width="50">
+            </span>
+          </div>
+          <button type="button">Place Order</button>
+        </div><!-- Yorder -->
+       </div>
+      </div> 
+</body>
+
+</html>
