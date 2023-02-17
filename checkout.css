@@ -28,6 +28,8 @@ body{
 }
 form{
   flex: 4;
+  display: block;
+  position: relative;
 }
 .Yorder{
   flex: 2;
@@ -59,7 +61,7 @@ label>span{
   margin-top: 12px;
   padding-right: 10px;
 }
-input[type="text"], input[type="tel"], input[type="email"], select
+input[type="text"], input[type="number"], input[type="email"], select
 {
   width: 70%;
   height: 30px;
@@ -69,7 +71,7 @@ input[type="text"], input[type="tel"], input[type="email"], select
   color: #888;
 }
 select{
-  width: 72%;
+  width: 75%;
   height: 45px;
   padding: 5px 10px;
   margin-bottom: 10px;
@@ -112,7 +114,7 @@ p{
 }
 
 button{
-  width: 100%;
+  width: 76%;
   margin-top: 10px;
   padding: 10px;
   border: none;
@@ -125,4 +127,10 @@ button{
 button:hover{
   cursor: pointer;
   background:  #a53e76;
+}
+
+.header {
+  display: block;
+  position: absolute;
+  top: 50%;
 }

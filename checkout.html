@@ -6,6 +6,11 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <title>Checkout Page</title>
 </head>
 
@@ -14,7 +19,7 @@
         <h2>Checkout Form</h2>
     </div>
   <div class="d-flex">
-    <form id="food-order">
+    <form id="ticket-order">
         <div class="form-group">
           <label for="productSelect">Tickets: </label>
           <select name="ticket" class="form-control" id="productSelect">
@@ -37,10 +42,27 @@
           />
           <button id="addButton">Add to cart</button>
         </div>
-       
+        
       </form>
+
+      <div class="header">
+        <div class="box">
+          <h1>QR Code</h1>
+          <h5>Kindly save and present upon arrival.</h5>
+          <hr />
+          <div class="sqrcode"></div>
+          <div class="qrcode"></div>
+          <!-- <input
+            type="text"
+            placeholder="Paste an URL or enter text, then press enter"
+            onchange="generateQr()"
+          /> -->
+        </div>
+      </div>
+      <script src="./qrcode.js"></script>
+      
     <div class="Yorder">
-        <h3>Your Order</h3>
+        <h3>Your Cart</h3>
       <table id="productTable">
         <tr>
           <th colspan="2">Product</th>
@@ -66,10 +88,10 @@
           Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
       </p>
       <div>
-        <input type="radio" name="dbt" value="cd"> Cash on Delivery
+        <input type="radio" name="dbt" value="cd"> GCash/Maya
       </div>
       <div>
-        <input type="radio" name="dbt" value="cd"> Paypal <span>
+        <input type="radio" name="dbt" value="cd"> Debit/Credit Card <span>
             <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" alt="" width="50">
             </span>
           </div>
