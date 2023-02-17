@@ -136,7 +136,9 @@ body {
 	color: #fff;
 }
 
-
+.submit {
+  color: white;
+}
 
 .menu label {
   margin-bottom: 0;
@@ -164,6 +166,13 @@ input#menu[type="checkbox"] {
   margin-bottom: 10px;
 }
 
+.addToCart {
+  width: 40px;
+  float: right;
+  /* position: absolute; */
+    /* bottom: 0;
+    right: 0; */
+}
 
 .sub-menu-dropdown {
 	display: none;
@@ -280,6 +289,32 @@ input#menu[type="checkbox"] {
   top: 73px;
 		transform: translate3d(200px, 0, 0);
     transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#searchButton #searchButton  {
+  width: 80px;
+  color: white;
+}
+
+form.d-flex input[type="search"] {
+  width: 225px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 500px;
+  align-items: center;
+  position: absolute;
+  bottom: 10;
+}
+
+form.d-flex button {
+  display: inline-block;
+  width: 225px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-top: 550px;
+  position: absolute;
+  bottom: 10;
 }
 	
 	/* label.hamburger {
@@ -590,4 +625,49 @@ h4, .h4 {font-size: 1.2em;}
 
 
 
+/* Code for the QR Code Generator for tickets */
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.header .box{
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 20px;
+  color: #1e7fb0;
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.header .box hr{
+  border-top: 2px solid #a2a2a2;
+  margin: 3px;
+}
+.header .box input{
+  width: 100%;
+  margin-bottom: 3px;
+  height: 50px;
+  padding: 3px;
+  resize: vertical;
+}
+.header .box .qrcode{
+  padding: 3px;
+
+}
+.header .box .sqrcode{
+  padding: 3px;
+  margin-left: 15px;
+}
+.header .box button{
+  width: 100%;
+  height: 35px;
+  background: #1e7fb0;
+  font-weight: 700;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
 

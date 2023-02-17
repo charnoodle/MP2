@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    let username = localStorage.getItem("un");
-    let password = localStorage.getItem("pass");
+    let username = localStorage.getItem("userName");
+    let password = localStorage.getItem("password");
     if (username) {
-      $("#un").val(username);
+      $("#userName").val(username);
     }
     if (password) {
-      $("#pass").val(password);
+      $("#password").val(password);
     }
-    let rememberMe = localStorage.getItem("rememberMe");
+    let rememberMe = localStorage.getItem("#rememberMe");
 if (rememberMe) {
   $("#rememberMe").prop("checked", true);
 }
 $("#userForm").submit(function (event) {
   event.preventDefault();
-  let username = $("#username").val();
+  let username = $("#userName").val();
   let password = $("#password").val();
   rememberMe = $("#rememberMe").prop("checked");
   if (username == "admin" && password == "admin123") {

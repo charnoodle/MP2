@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+    box-sizing: border-box;
+  }
+  
+  .video {
+    text-align: center;
+  }
+  
+  .attractions {
+    font-weight: bolder;
+    text-align: center;
+    color: #a53e76;
+    text-shadow: rgb(158, 154, 154);
+  }
+  
+  .card {
+    box-shadow: 5px 5px 10px #cfcecd;
+    border-radius: 15px;
+    transition: transform 0.6s ease;
+  }
+  
+  .card-title {
+    color: #a53e76;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn {
+    background-color: #a53e76;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #f0a6d3;
+    border-radius: 15px;
+    color: #111011;
+    font-weight: bold;
+  }
