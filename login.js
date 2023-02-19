@@ -7,7 +7,7 @@ $(document).ready(function () {
     if (password) {
       $("#password").val(password);
     }
-    let rememberMe = localStorage.getItem("#rememberMe");
+    let rememberMe = localStorage.getItem("rememberMe");
 if (rememberMe) {
   $("#rememberMe").prop("checked", true);
 }
@@ -26,9 +26,9 @@ $("#userForm").submit(function (event) {
       localStorage.removeItem("password");
       localStorage.removeItem("rememberMe");
     }
-    window.location.href = "./home.html";
+    window.location.href = "./index.html";
   }
 });
   });
   
-  
+  // add function so that by clicking signup it wont send you to the home page

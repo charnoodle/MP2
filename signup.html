@@ -2,12 +2,50 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="sidebar.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <title>Signup Form</title>
 </head>
+<div class="primary-nav">
+  <button href="#" class="hamburger open-panel nav-toggle">
+      <span class="screen-reader-text">Menu</span>
+  </button>
+
+<nav role="navigation" class="menu">
+  <a href="#" class="logotype"><img src="Clogo3 with white circle.png" class="logo"> <span id="formsHeader">Forms</span></a>
+
+<div class="overflow-container">  
+  <ul class="menu-dropdown">
+      <li><a href="./index.html">Home</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+      <li class="menu-hasdropdown">
+          <a href="#">Sign up Form</a><span class="icon"><i class="fa fa-gear"></i></span>
+          <label title="toggle menu" for="settings">
+              <span class="downarrow"><i class="fa fa-caret-down"></i></span>
+          </label>
+  <input type="checkbox" class="sub-menu-checkbox" id="settings" />
+      <ul class="sub-menu-dropdown">
+          <li><a href="">Profile</a></li>
+          <li><a href="">Security</a></li>
+          <li><a href="">Account</a></li>
+      </ul>
+      </li>
+          <li><a href="#">About Us</a><span class="icon"><i class="fa fa-heart"></i></span></li>
+          <li><a href="login.html">Login/Signup</a><span class="icon"><i class="fa fa-envelope"></i></span></li>
+          <li><a href="checkout.html">Visit Us!<img src="cartcirclepink.png" class="addToCart" alt="carty" /></a><span class="icon"><i class="fa fa-envelope"></i></span></li>
+  </ul>
+  
+<form class="d-flex flex-column" id="search-form">
+  <input class="form-control me-2" type="search" placeholder="Use keywords" aria-label="Search" id="searchBar"/>
+  <button class="btn btn-outline-default" type="submit" id="searchButton" style="color:white">Search</button>
+</form>
+</div>
+</nav>
+</div>
+
+
 
 <div class="container">
     <div class="title">
