@@ -10,22 +10,31 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <script src="./checkout.js"></script>
   <title>Checkout Page</title>
 </head>
+<body>
+
+
+
+<div class="title">
+  <h2>Checkout Form</h2>
+</div>
+
 
 <div class="container">
-    <div class="title">
-        <h2>Checkout Form</h2>
-    </div>
+ 
   <div class="d-flex">
     <form id="ticket-order">
         <div class="form-group">
           <label for="productSelect">Tickets: </label>
           <select name="ticket" class="form-control" id="productSelect">
-            <option selected disabled value="burger">Select one</option>
+            <option selected disabled value="">Select one</option>
             <option value="rideAllYouCan">Ride all you can!</option>
-            <option value="fastPass"><strong>Fast Pass</strong></option>
+            <option value="xpressPass"><strong>Xpress Pass</strong></option>
             <option value="regular">Regular</option>
             <option value="basic">Basic</option>
             <option value="groupPackage">Group Package (5 pax)</option>
@@ -37,7 +46,7 @@
             class="form-control mb-2"
             id="quantityInput"
             min="1"
-            max="9"
+            max="99"
             value="1"
           />
           <button id="addButton">Add to cart</button>
@@ -63,11 +72,17 @@
       
     <div class="Yorder">
         <h3>Your Cart</h3>
-      <table id="productTable">
-        <tr>
-          <th colspan="2">Product</th>
-          <th colspan="2">Quantity</th>
-        </tr>
+      <table id="productTable" class="table">
+        <thead>
+          <tr>
+            <th colspan="3">Product</th>
+            <th colspan="3">Quantity</th>
+            <th colspan="3">Action</th>
+          </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
         <!-- <tr>
           <td></td>
           <td></td>
@@ -81,6 +96,8 @@
           <td>Free shipping</td>
         </tr> -->
       </table><br>
+      <div id="total">Total: ₱0</div>
+      <br>
       <div>
         <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
       </div>
@@ -95,10 +112,52 @@
             <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" alt="" width="50">
             </span>
           </div>
-          <button type="button">Place Order</button>
-        </div><!-- Yorder -->
-       </div>
-      </div> 
+          <button type="button" id="placeOrderBtn" onclick="generateQr()">Place Order</button>
+
+
+
+
+      
+
+          
+      </div><!-- Yorder -->
+    </div>
+  </div> 
+
+  <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+        Launch demo modal
+      </button>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Your order has been placed!</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 
 </html>

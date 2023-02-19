@@ -635,7 +635,7 @@ h4, .h4 {font-size: 1.2em;}
 }
 .header .box{
   background: #f4f4f4;
-  padding: 20px;
+  padding: 0px;
   border-radius: 20px;
   color: #1e7fb0;
   box-shadow: 10px 10px rgba(0,0,0,0.2);
@@ -671,3 +671,8 @@ h4, .h4 {font-size: 1.2em;}
   cursor: pointer;
 }
 
+#formsHeader .logotype {
+  color: white !important;
+
+
+}

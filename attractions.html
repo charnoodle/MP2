@@ -12,14 +12,150 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="attractions.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <style></style>
   </head>
   <html>
     <body>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <!-- lagay ko muna tong logo na ferris wheel ne, palitan nalang -->
+          <a class="navbar-brand"href="#"><img src="img/logo.gif"
+                style="width: 60px" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-light active" aria-current="page" href="#" target="#">Home</a>
+              </li>
+              <li class="nav-item"> 
+                <!-- link to cha2 -->
+                <a class="nav-link text-light active" href="./AboutUs.html" target="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <!-- link to cha1 -->
+                <a class="nav-link text-light active" href=".html" target="#">Booking</a>
+              </li>
+              <li class="nav-item">
+                <!-- link to kuya ranilo -->
+                <a class="nav-link text-light active" href="./attractions.html" target="#">Attractions</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light me-2" type="submit">Search</button>
+              </form>
+              <button class="btn btn-outline-light me-auto" type="submit">Log in</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="video mt-5">
-        <video width="1280" height="720" autoplay muted>
-          <source src="attractions.mp4" type="video/mp4" />
-        </video>
+      <div class="video-container">
+      <video id="video" disableRemotePlayback src="attractions.mp4"></video>
+      <span class="custom-loader"></span>
+      <div class="player-state">
+        <span class="state-btn state-backward">
+          <ion-icon name="play-back-outline"></ion-icon>
+          <span class="backward-duration">5</span>
+        </span>
+        <span class="main-state state-btn">
+          <ion-icon name="play-outline"></ion-icon>
+        </span>
+        <span class="state-btn state-forward">
+          <span class="forward-duration">5</span>
+          <ion-icon name="play-forward-outline"></ion-icon>
+        </span>
+      </div>
+      <div class="controls">
+        <div class="duration">
+          <div class="current-time"></div>
+          <div class="hover-time">
+            <span class="hover-duration"></span>
+          </div>
+          <div class="buffer"></div>
+        </div>
+        <div class="btn-controls">
+          <div class="btn-con">
+            <span class="play-pause control-btn">
+              <ion-icon name="play-outline"></ion-icon>
+            </span>
+            <span class="volume">
+              <span class="mute-unmute control-btn">
+                <ion-icon name="volume-high-outline"></ion-icon>
+              </span>
+              <div class="max-vol">
+                <div class="current-vol"></div>
+              </div>
+            </span>
+            <span class="time-container">
+              <span class="current-duration">0:00</span>
+              <span>/</span>
+              <span class="total-duration">0:00</span>
+            </span>
+          </div>
+          <div class="right-controls">
+            <span class="backward control-btn" title="5 backward">
+              <ion-icon name="play-back-outline"></ion-icon>
+            </span>
+            <span class="forward control-btn" title="5 forward">
+              <ion-icon name="play-forward-outline"></ion-icon>
+            </span>
+            <span class="mini-player control-btn">
+              <ion-icon name="albums-outline"></ion-icon>
+            </span>
+            <span class="settings control-btn">
+              <span class="setting-btn">
+                <ion-icon name="options-outline"></ion-icon>
+              </span>
+              <ul class="setting-menu">
+                <li data-value="0.25">0.25x</li>
+                <li data-value="0.5">0.5x</li>
+                <li data-value="0.75">0.75x</li>
+                <li data-value="1" class="speed-active">1x</li>
+                <li data-value="1.25">1.25x</li>
+                <li data-value="1.5">1.5x</li>
+                <li data-value="1.75">1.75x</li>
+                <li data-value="2">2x</li>
+              </ul>
+            </span>
+            <span class="theater-btn control-btn">
+              <span class="theater-default">
+                <ion-icon name="tablet-landscape-outline"></ion-icon>
+              </span>
+              <span class="theater-active">
+                <ion-icon name="tv-outline"></ion-icon>
+              </span>
+            </span>
+            <span class="fullscreen-btn control-btn" title="fullscreen">
+              <span class="full">
+                <ion-icon name="scan-outline"></ion-icon>
+              </span>
+              <span class="contract">
+                <ion-icon name="contract-outline"></ion-icon>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
       </div>
 
       <div class="col-lg-2 text-center fs-3"></div>
@@ -116,6 +252,100 @@
           </div>
         </div>
       </section>
+      <div class="shadow-sm p-3 mb-5 bg-white rounded">
+  <div class="container2 my-5">
+    <section class="d-flex justify-content-between p-4 text-white"></section>
+    <div class="me-5"></div>
+    <div>
+      <i class="bi bi-facebook"></i>
+      <a href="#" class="links me-4"><img src="img/facebook.jpg"></a>
+      <i class="bi bi-twitter"></i>
+      <a href="#" class="links me-4"><img src="img/twitt.png"></a>
+      <i class="bi bi-instagram"></i>
+      <a href="#" class="links me-4"><img src="img/instagram.png"></a>    
+      <i class="bi bi-linkedin"></i>
+      <a href="#" class="links me-4"><img src="img/linkin.png"></a>
+      <i class="bi bi-google"></i>
+      <a href="#" class="links me-4"><img src="img/git.png"></a>  
+    </div>
+  </section>
+  <section class="container3">
+    <div class="container text-center text-md-start mt-5 text-light">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          
+          <h6 class="text-uppercase fw-bold">Charjeram</h6>
+          <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+          <p>
+            You can explore the amazing features of Charjeram Wonderland has to offer and why it is one of the best amusement parks around. 
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-light">
+          <h6 class="text-uppercase fw-bold">Rides</h6>
+          <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+          <p>
+            <a href="#!" class="text-light">Anchors Away</a>
+          </p>
+          <p>
+            <a href="#!" class="text-light">Skill Games</a>
+          </p>
+          <p>
+            <a href="#!" class="text-light">Disk-O-Magic</a>
+          </p>
+          <p>
+            <a href="#!" class="text-light">Space Shuttle</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        
+          <h6 class="text-uppercase fw-bold text-light">Useful links</h6>
+          <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+          <p>
+            <a href="#!" class="text-light">Charjeram</a>
+          </p>
+          <p>
+            <a href="#!" class="text-light">Become an Affiliate</a>
+          </p>
+          <p>
+            <a href="#!" class="text-light">Ticket Rates</a>
+          </p>
+          <p>
+            <a href="#!" class="text-light">Help</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-light">
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #a53e76; height: 2px"
+              />
+          <p><i class="fas fa-home mr-3"></i> FindMe, Universal 111, PHL</p>
+          <p><i class="fas fa-envelope mr-3"></i> Charjeram.WonderLand@gmail.com</p>
+          <p><i class="fas fa-phone mr-3"></i> + 639 456 454 68</p>
+          <p><i class="fas fa-print mr-3"></i> + 639 234 567 19</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+      class="text-center p-3 text-light">
+      © Charjeram.WonderLand@gmail.com:
+    <a class="text-light" href="#"
+      >Charjeram</a>
+  </div>
+  </footer>
+  </div>
+</div>
+<script defer src="js/attractions.js"></script>   
     </body>
   </html>
 </html>
